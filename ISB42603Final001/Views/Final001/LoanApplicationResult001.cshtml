@@ -1,0 +1,40 @@
+﻿@model ISB42603Final001.Models.HousingLoan
+
+<head>
+    <title>Loan Application Result</title>
+    <link href="~/css/Loan.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        <label>Customer id:</label>
+        @Html.DisplayFor(x => x.Id)
+    </p>
+    <p>
+        <label>Name:</label>
+        @Html.DisplayFor(x => x.Name)
+    </p>
+    <p>
+        <label>Gender (M/F):</label>
+        @Html.DisplayFor(x => x.Gender)
+    </p>
+    <p>
+        <label>Credit status (A/B/C):</label>
+        @Html.DisplayFor(x => x.CreditRisk)
+    </p>
+    <p>
+        <label>Interest rate(%):</label>
+        @Html.DisplayFor(x => x.InterestRate)
+    </p>
+    <p>
+        <label>Principal (RM):</label>
+        @Html.DisplayFor(x => x.Principal)
+    </p>
+    <p>
+        <label>Number of years:</label>
+        @Html.DisplayFor(x => x.NumberOfYears)
+    </p>
+    <p>
+        <label>Monthly payment (RM):</label>
+        @Html.DisplayFor(x => x.MonthlyPayment)
+    </p>
+</body>

@@ -1,0 +1,76 @@
+﻿@model ISB42603Final001.Models.HousingLoan
+
+<head>
+    <title>Loan Application Form</title>
+    <link href="~/css/Loan.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.Id)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Id, "",
+           new { @class = "text-danger" })
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.Name)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Name, "",
+               new { @class = "text-danger" })
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.Gender)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.Gender, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Gender, "",
+               new { @class = "text-danger" })
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.CreditRisk)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.CreditRisk, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.CreditRisk, "",
+               new { @class = "text-danger" })
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.Principal)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.Principal, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Principal, "",
+               new { @class = "text-danger" })
+        </p>
+    </div>
+    <div class="row">
+        <p class="col-md-2">
+            <label>@Html.DisplayNameFor(x => x.NumberOfYears)</label>
+        <p>
+        <p class="col-md-2">
+            @Html.TextBoxFor(x => x.NumberOfYears, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.NumberOfYears, "",
+               new { @class = "text-danger" })
+        </p>
+    </div>
+        <br />
+        <p>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </p>
+    }
+</body>

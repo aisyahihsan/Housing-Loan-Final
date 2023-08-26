@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ISB42603Final001.Models.HousingLoan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditRisk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Principal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InterestRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfYears)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyPayment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditRisk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Principal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InterestRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfYears)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonthlyPayment)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>Highest principal amount: @ViewBag.HighPrincipal.ToString("n2")</p>
+<p>Lowest principal amount: @ViewBag.LowPrincipal.ToString("n2")</p>
+<p>Average monthly payment (Female): @ViewBag.AverageMonthlyFemale.ToString("n2")</p>
+<p>Average monthly payment (Male): @ViewBag.AverageMonthlyMale.ToString("n2")</p>
+
